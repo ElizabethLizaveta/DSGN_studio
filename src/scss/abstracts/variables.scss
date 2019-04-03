@@ -1,0 +1,124 @@
+// Global variables
+//
+// Base font styles for headings and links.
+
+// Global vars for body typography
+$base: (
+  'base-font-family': unquote("'Roboto Condensed', sans-serif"),
+  'base-text-color': #333,
+  'base-background-color': #fff,
+  'base-link-color':#333,
+  'base-font-size': 16px,
+  'base-line-height': 1.2,
+  'base-min-width': 320px
+);
+
+$header-logo: (
+'section-bg':#e9eae2,
+);
+
+$header-contact: (
+  'section-bg': #7acec3,
+  'section-font-color': #fff,
+);
+
+$header-nav: (
+  'section-bg': #f8c255,
+  'section-font-color': #fff,
+);
+
+$projects-box: (
+  'section-bg': #ebb240,
+  'section-font-color': #fff,
+);
+
+$project-1: (
+  'section-font-color': #333,
+  'section-bg': #fefefe,
+);
+
+$project-2: (
+  'section-font-color': #fff,
+);
+
+$project-3: (
+  'section-font-color': #333,
+);
+
+$project-4: (
+  'section-font-color': #333,
+);
+
+$project-5: (
+  'section-font-color': #333,
+);
+
+$project-6: (
+  'section-font-color': #333,
+);
+
+$project-7: (
+  'section-font-color': #333,
+);
+
+$project-8: (
+  'section-font-color': #333,
+);
+
+$timeline: (
+  'section-bg': #ebb240,
+  'section-font-color': #fff,
+);
+
+$studio-box: (
+  'section-bg': #ff9b6d,
+  'section-font-color': #fff,
+);
+
+$studio: (
+  'section-bg': #e9eae2,
+  'section-font-color': #333,
+);
+
+$news-box: (
+  'section-bg': #d4edbf,
+  'section-font-color': #fff,
+);
+
+$news: (
+  'section-bg': #e5e9df,
+  'section-font-color': #333,
+);
+
+$footer: (
+  'section-bg': #e9eae2,
+  'section-font-color': #333,
+);
+
+// Vars for forms
+$forms: (
+  'form-font-family': unquote("Arial, 'Helvetica Neue', Helvetica, sans-serif"),
+  'form-element-padding': unquote("0.4em 0.7em"),
+  'form-element-border-color': #999,
+  'form-element-focus-border-color': #000,
+  'placeholder-color': #999
+);
+
+// Breakpoints for include media mixin
+$breakpoints: (
+  'phone': 480px,
+  'tablet': 768px,
+  'desktop': 980px,
+  'widescreen': 1200px
+);
+
+// Keywords for include media mixin
+$media-expressions: (
+  'screen': 'screen',
+  'print': 'print',
+  'handheld': 'handheld',
+  'landscape': '(orientation: landscape)',
+  'portrait': '(orientation: portrait)',
+  'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+  'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);

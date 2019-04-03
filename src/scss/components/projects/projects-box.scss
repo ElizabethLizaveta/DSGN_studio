@@ -1,0 +1,176 @@
+.projects-box {
+    width: 100%;
+    background: map-get($projects-box, 'section-bg');
+    position: relative;
+    background-image: linear-gradient(to bottom right, transparent 49.8%, #fff, transparent 50.2%);
+    @include media('<tablet') {
+        background-image: none;
+    } 
+
+     &:before {
+        content: '';
+        display: block;
+        width: 9999px;
+        height: 100%;
+        background: #ebb240;
+        position: absolute;
+        right: 100%;
+
+        @include media('<1500px') {
+            display: none;
+        }
+    } 
+
+    @include media('<tablet') {
+        padding: rem-size(20px);
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .header-wrap {
+        position: absolute;
+        bottom: 30%;
+        right: 10%;
+
+        @include media('<1400px') {
+            right: 5%;
+        }
+
+        @include media('<widescreen') {
+            right: 10%;
+        }
+
+        @include media('<tablet') {
+            position: relative;
+            left: 0;
+            top: 0;
+        }
+
+        .h1 {
+            @include rem-font-size(48px);
+            color: map-get($projects-box, 'section-font-color');
+            margin-bottom: 0;
+
+            @include media('<1400px') {
+                @include rem-font-size(40px);
+            }
+
+            @include media('<widescreen') {
+                @include rem-font-size(35px);
+            }
+
+            @include media('<desktop') {
+                @include rem-font-size(30px);
+            }
+        }
+
+        .projects-button {
+            display: none;
+
+            @include media('<tablet') {
+                display: block;
+                position: absolute;
+                right: -40%;
+                top: 55%;
+                transform: translateY(-50%);
+                z-index: 2;
+            }
+
+            &.rotate-up {
+                animation: spin-up 0.3s linear forwards;
+            }
+
+            &.rotate-down {
+                animation: spin-down 0.3s linear forwards;
+            }
+
+            i {
+                @include rem-font-size(25px);
+                color: #fff;
+            }
+        }
+    }
+
+    .projects-menu {
+        position: absolute;
+        left: 35%;
+        top: 34%;
+
+        @include media('<1400px') {
+            left: 29%;
+        }
+
+        @include media('<widescreen') {
+            left: 20%;
+            top: 25%;
+        }
+
+        @include media('<desktop') {
+            top: 17%;
+        }
+
+        @include media('<tablet') {
+            position: relative;
+            left: 0;
+            top: 0;
+            padding-left: rem-size(30px);
+            display: none;
+            margin-top: rem-size(20px);
+            z-index: 2;
+        }
+
+        li {
+            @include rem-font-size(13px);
+            position: relative;
+            text-transform: uppercase;
+
+            @include media('<tablet') {
+                @include rem-font-size(25px);
+            }
+
+            &:hover,
+            &:focus {
+
+                a {
+                    color: #000;
+                }
+            }
+
+            a {
+                color: map-get($projects-box, 'section-font-color');
+            }
+
+            .active-state-icon {
+                display: none;
+                color: #fff;
+            }
+
+            &.active-state {
+
+                .active-state-icon {
+                    @include rem-font-size(18px);
+                    display: block;
+                    position: absolute;
+                    left: rem-size(-25px);
+                    top: rem-size(-5px);
+
+                    @include media('<tablet') {
+                        top: 0;
+                    }
+                }
+
+                a {
+                    color: #000;
+                }
+            }
+        }
+
+        li + li {
+            @include media('<tablet') {
+                margin-top: rem-size(20px);
+            }
+        }
+
+    }
+}

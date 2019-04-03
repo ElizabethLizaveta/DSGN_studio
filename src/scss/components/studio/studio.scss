@@ -1,0 +1,14 @@
+.studio {
+    position: relative;
+    background: map-get($studio, 'section-bg');
+    color: map-get($studio, 'section-font-color');
+    font-weight: 300;
+
+    .row {
+        display: flex;
+
+        @include media('<tablet') {
+            flex-direction: column;
+         }
+    }
+}

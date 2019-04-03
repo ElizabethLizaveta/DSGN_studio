@@ -1,0 +1,105 @@
+.project-2 {
+    @include rem-font-size(12px);
+    position: relative;
+    line-height: rem-size(12px);
+    font-weight: 300;
+    color: map-get($project-2, 'section-font-color');
+    background: 100% 100%/cover;
+    
+    @include media('<tablet') {
+        background: 100% 0%/cover;
+    }
+
+    &:before {
+        content: '';
+        display: block;
+        width: 9999px;
+        height: 100%;
+        background: url(../images/bg-product-line.jpg) 100% 0/contain repeat-x;
+        position: absolute;
+        right: 100%;
+
+        @include media('<1500px') {
+            display: none;
+        }
+    } 
+
+    .text-content {
+        position: absolute;
+        top: 10%;
+        left: 9%;
+
+        @include media('<widescreen') {
+            left: 15%;
+        }
+    }
+
+    .h2 {
+        @include rem-font-size(24px);
+        margin-bottom: rem-size(17px);
+
+        @include media('<widescreen') {
+            @include rem-font-size(20px);
+        }
+
+        @include media('<desktop') {
+            @include rem-font-size(18px);
+        }
+    }
+
+    .project-info {
+        margin-bottom: rem-size(35px);
+    }
+
+    .project-link {
+        color: map-get($project-2, 'section-font-color');
+        margin-left: rem-size(8px);
+
+        @include media('<widescreen') {
+            margin-left: 0;
+        }
+
+        &:hover,
+        &:focus {
+            color: #f8c255;
+        }
+    }
+
+    .like {
+        position: absolute;
+        left: 24%;
+        bottom: 47%;
+        
+        @include media('<1460px') {
+            bottom: 38%;
+        }
+
+        @include media('<widescreen') {
+            bottom: 10%;
+            left: 35%;
+        }
+
+        @include media('<tablet') {
+            left: 5%;
+            bottom: 40%;
+        }
+
+        @include media('<phone') {
+            left: 55%;
+            top: 32%;
+        }
+
+        .like-button {
+            color: #fff;
+
+            &:hover,
+            &:focus {
+                color: #fe7c7c;
+            }
+        }
+
+        .like-number {
+            color: #fe7c7c;
+        }
+    }
+}

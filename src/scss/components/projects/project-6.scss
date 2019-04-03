@@ -1,0 +1,107 @@
+.project-6 {
+    @include rem-font-size(12px);
+    width: 100%;
+    position: relative;
+    font-weight: 300;
+    line-height: rem-size(12px);
+    color: map-get($project-6, 'section-font-color');
+    background: 0% 100%/cover;
+
+    &:before {
+        content: '';
+        display: block;
+        width: 9999px;
+        height: 100%;
+        background: #dfe0d9;
+        position: absolute;
+        left: 100%;
+
+        @include media('<1500px') {
+            display: none;
+        }
+    } 
+
+    @include media('<widescreen') {
+        background: 100% 0%/cover;
+    }
+
+    .text-content {
+        position: absolute;
+        top: 16%;
+        left: 9%;
+
+        @include media('<desktop') {
+            top: 10%;
+            left: 10%;
+        }
+    }
+
+    .project-link {
+        color: map-get($project-6, 'section-font-color');
+
+        &:hover,
+        &:focus {
+            color: #f8c255;
+        }
+    }
+
+    .h2 {
+        @include rem-font-size(24px);
+        margin-bottom: rem-size(14px);
+
+        @include media('<widescreen') {
+            @include rem-font-size(20px);
+        }
+
+        @include media('<desktop') {
+            @include rem-font-size(18px);
+        }
+    }
+
+    .project-info {
+        width: 38%;
+        margin-bottom: rem-size(15px);
+
+        @include media('<widescreen') {
+            margin-bottom: rem-size(40px);
+        }
+
+        @include media('<phone') {
+            margin-bottom: rem-size(10px);
+        }
+
+        span {
+            font-weight: 700;
+            margin-right: rem-size(5px);
+        }
+    }
+
+    .like {
+        position: absolute;
+        left: 12%;
+        bottom: 9%;
+
+        @include media('<1450px') {
+            top: 10%;
+            left: 38%;
+        }
+
+        @include media('<widescreen') {
+            top: 50%;
+            left: 10%;
+        }
+
+        @include media('<desktop') {
+            top: 70%;
+            left: 10%;
+        }
+
+        @include media('<tablet') {
+            top: 55%;
+        }
+
+        @include media('<phone') {
+            top: 75%;
+        }
+    }
+}

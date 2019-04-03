@@ -1,0 +1,137 @@
+.staff {
+    @include rem-font-size(14px);
+    line-height: rem-size(18px);
+    padding: rem-size(60px) 0 rem-size(102px);
+
+    @include media('<widescreen') {
+        padding: rem-size(40px) 0 rem-size(80px);
+    }
+
+    @include media('<tablet') {
+        padding-bottom: rem-size(40px);
+    }
+
+    @include media('<phone') {
+        padding-bottom: rem-size(20px);
+    }
+
+    .inner-wrap {
+        max-width: rem-size(1198px);
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 rem-size(15px);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .col {
+        width: 23%;
+
+        @include media('<widescreen') {
+            width: 30%;
+        }
+
+        @include media('<phone') {
+            width: 100%;
+        }
+
+    }
+
+    .col:nth-child(1) {
+        @include media('<widescreen') {
+           width: 100%;
+           margin-bottom: rem-size(20px);
+        }
+    }
+
+    .col + .col {
+        @include media('<phone') {
+            margin-bottom: rem-size(20px);
+        }
+    }
+
+    .h3 {
+        @include rem-font-size(14px);
+        margin-bottom: rem-size(16px);
+    }
+
+    p {
+        @include media('<widescreen') {
+            margin-bottom: 0;
+        }
+    }
+
+    p + p {
+        margin-top: rem-size(18px);
+
+        @include media('<widescreen') {
+            margin-top: 0;
+        }
+    }
+
+    .img-wrap {
+        margin-bottom: rem-size(18px);
+        
+        img {
+            min-width: 100%;
+        }
+    }
+
+    .name {
+        @include rem-font-size(13px);
+        line-height: rem-size(16px);
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 0;
+    }
+
+    .position {
+        @include rem-font-size(12px);
+        text-transform: uppercase;
+        line-height: rem-size(10px);
+        margin-bottom: rem-size(17px);
+    }
+
+    .links {
+        display: flex;
+        justify-content: space-between;
+    
+        a {
+            @include rem-font-size(14px);
+            color: #fd5000;
+            font-weight: 400;
+            position: relative;
+
+            &:hover,
+            &:focus {
+               opacity: 0.5;
+            }
+        }
+
+        .icon-arrow-left {
+            @include rem-font-size(20px);
+            margin-left: rem-size(5px);
+            position: absolute;
+            bottom: 0;
+
+            @include media('<tablet') {
+                @include rem-font-size(15px);
+            }
+        }
+    }
+
+    .social {
+        display: flex;
+
+        li + li {
+            margin-left: rem-size(13px);
+
+            @include media('<tablet') {
+                margin-left: rem-size(7px);
+            }
+        }
+    }
+
+
+}

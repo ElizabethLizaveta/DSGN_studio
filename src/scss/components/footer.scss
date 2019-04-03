@@ -1,0 +1,204 @@
+.footer {
+    background: map-get($footer, 'section-bg');
+    color: map-get($footer, 'section-font-color');
+    position: relative;
+    height: calc(100vw*0.43);
+    padding: rem-size(150px) 0 rem-size(53px);
+
+    @include media('<1400px') {
+        padding: rem-size(100px) 0 rem-size(53px);
+    }
+
+    @include media('<widescreen') {
+        padding: rem-size(50px) 0 rem-size(30px);
+    }
+
+    @include media('<desktop') {
+        padding: rem-size(40px) 0 rem-size(20px);
+    }
+
+    @include media('<tablet') {
+        padding: rem-size(20px) 0 rem-size(20px);
+        height: unset;
+    }
+
+    .inner-wrap {
+        max-width: rem-size(1198px);
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 rem-size(15px);
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+
+        @include media('<tablet') {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    }
+
+    .map {
+        width: 50%;
+        height: calc(100vw*0.43);
+        position: absolute;
+        top: 0;
+        left: 0;
+    
+        @include media('<tablet') {
+            position: relative;
+            width: 100%;
+            height: calc(100vw*0.85);
+            margin-bottom: rem-size(20px);
+        }
+    }
+
+    .footer-content {
+        height: 100%;
+        width: 40%;
+        padding-right: rem-size(10px);
+        display: flex;
+        flex-direction: column; 
+        justify-content: space-between;
+
+        @include media('<tablet') {
+            width: 100%;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &-contact {
+        @include rem-font-size(13px);
+        text-transform: uppercase;
+
+        @include media('<widescreen') {
+            @include rem-font-size(12px);
+        }
+
+        @include media('<tablet') {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        address {
+            margin-bottom: rem-size(14px);
+        }
+
+        .contact {
+
+            a {
+                color: map-get($footer, 'section-font-color');
+                display: block;
+
+                &:hover,
+                &:focus {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+
+    &-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include media('<widescreen') {
+            width: 40%;
+        }
+
+        @include media('<desktop') {
+            width: 35%;
+        }
+
+        @include media('<tablet') {
+            display: none;
+        }
+
+        .logo {
+            margin-bottom: rem-size(55px);
+    
+            @include media('<widescreen') {
+                margin-bottom: rem-size(40px);
+            }
+
+            @include media('<desktop') {
+                margin-bottom: rem-size(30px);
+            }
+        }
+    }
+
+    .social {
+
+        li {
+            display: inline-block;
+
+            &:hover,
+            &:focus {
+
+                i {
+                    opacity: 0.5;
+                }
+            }
+        }
+
+        li+li {
+            margin-left: rem-size(9px);
+
+            @include media('<widescreen') {
+                margin-left: rem-size(5px);
+            }
+
+            @include media('<phone') {
+                margin-left: rem-size(8px);
+            }
+        }
+
+        i {
+            @include rem-font-size(25px);
+            color: #7acec3;
+
+            @include media('<widescreen') {
+                @include rem-font-size(18px);
+            }
+
+            @include media('<desktop') {
+                @include rem-font-size(14px);
+            }
+        }
+    }
+
+    .copy {
+        @include rem-font-size(13px);
+        width: 100%;
+        padding-left: rem-size(17px);
+        margin-top: rem-size(10px);
+
+        @include media('<tablet') {
+            padding-left: 0;
+        }
+
+        @include media('<phone') {
+            @include rem-font-size(10px);
+        }
+
+        .copyright {
+            @include rem-font-size(16px);
+            margin-right: rem-size(5px);
+        }
+
+        a {
+            color: map-get($footer, 'section-font-color');
+
+            &:hover,
+            &:focus {
+                opacity: 0.5;
+            }
+        }
+    }
+}

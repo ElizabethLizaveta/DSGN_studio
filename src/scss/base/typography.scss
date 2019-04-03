@@ -1,0 +1,37 @@
+// Typography
+//
+// Base font styles for headings and links.
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+.h {
+  font-weight: normal;
+  margin: 0 0 0.5em;
+  text-transform: uppercase;
+}
+
+.h2 {
+  font-weight: 300;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+a {
+  text-decoration: none;
+  color: map-get($base, 'base-link-color');
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+address {
+  font-style: normal;
+}

@@ -1,0 +1,76 @@
+.project-3 {
+    @include rem-font-size(12px);
+    position: relative;
+    line-height: rem-size(12px);
+    font-weight: 300;
+    color: map-get($project-3, 'section-font-color');
+    background: 100% 100%/cover;
+
+    @include media('<widescreen') {
+        background: 50% 0%/cover;
+    }
+
+    @include media('<tablet') {
+        background: 0% 100%/cover;
+    }
+
+    .text-content {
+        position: absolute;
+        top: 21%;
+        right: 10%;
+        display: flex;
+         
+        @include media('<desktop') {
+           flex-direction: column;
+           top: 15%;
+           right: 5%;
+        }
+
+        .left {
+            @include media('<desktop') {
+                margin-bottom: rem-size(30px);
+            }
+
+            @include media('<phone') {
+                margin-bottom: rem-size(20px);
+            }
+        }
+    }
+
+    .h2 {
+        @include rem-font-size(24px);
+        margin-bottom: rem-size(17px);
+
+        @include media('<widescreen') {
+            @include rem-font-size(20px);
+        }
+
+        @include media('<desktop') {
+            @include rem-font-size(18px);
+        }
+    }
+
+    .project-link {
+        color: map-get($project-3, 'section-font-color');
+        margin-top: rem-size(-8px);
+
+        &:hover,
+        &:focus {
+            color: #f8c255;
+        }
+    }
+
+    .like {
+        position: absolute;
+        top: 28%;
+        right: 5%;
+
+        @include media('<desktop') {
+            top: 60%;
+        }
+
+        @include media('<phone') {
+            top: 65%;
+        }
+    }
+}
