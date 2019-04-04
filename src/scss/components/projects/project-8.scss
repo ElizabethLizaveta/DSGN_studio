@@ -1,83 +1,90 @@
 .project-8 {
-    @include rem-font-size(12px);
-    width: 100%;
-    position: relative;
-    line-height: rem-size(12px);
-    font-weight: 300;
-    color: map-get($project-8, 'section-font-color');
-    background: 100% 100%/cover;
+  @include rem-font-size(12px);
+  width: 100%;
+  position: relative;
+  line-height: rem-size(12px);
+  font-weight: 300;
+  color: map-get($project-8, "section-font-color");
+  background: 100% 100% / cover;
 
-    .text-content { 
-        position: absolute;
-        top: 22%;
-        right: 14%;
+  .text-content {
+    position: absolute;
+    top: 22%;
+    right: 14%;
 
-        @include media('<1380px') {
-            top: 15%;
-            right: 9%;
-        }
-
-        @include media('<phone') {
-            top: 10%;
-            right: 3%;
-        }
+    @include media("<1380px") {
+      top: 15%;
+      right: 9%;
     }
 
-    .h2 {
-        @include rem-font-size(24px);
-        margin-bottom: rem-size(19px);
-
-        @include media('<widescreen') {
-            @include rem-font-size(20px);
-        }
-
-        @include media('<desktop') {
-            @include rem-font-size(18px);
-        }
+    @include media("<tablet") {
+      right: 5%;
     }
 
-    .project-info {
-        margin-bottom: rem-size(25px);
+    @include media("<phone") {
+      top: 10%;
+      right: 3%;
+    }
+  }
+
+  .h2 {
+    @include rem-font-size(24px);
+    margin-bottom: rem-size(19px);
+
+    @include media("<widescreen") {
+      @include rem-font-size(20px);
     }
 
-    .project-link {
-        color: map-get($project-8, 'section-font-color');
+    @include media("<desktop") {
+      @include rem-font-size(18px);
+    }
+  }
 
-        @include media('<phone') {
-            margin-left: rem-size(20px);
-        }
+  .project-info {
+    margin-bottom: rem-size(25px);
 
-        &:hover,
-        &:focus {
-            color: #f8c255;
-        }
+    @include media("<phone") {
+      margin-bottom: rem-size(20px);
+    }
+  }
+
+  .project-link {
+    color: map-get($project-8, "section-font-color");
+
+    @include media("<phone") {
+      margin-left: rem-size(20px);
     }
 
-    .like {
-        position: absolute;
-        bottom: 6%;
-        right: 17%;
-
-        @include media('<1380px') {
-            bottom: 3%;
-        }
-
-        @include media('<widescreen') {
-            bottom: 20%;
-        }
-
-        @include media('<desktop') {
-            bottom: 15%;
-        }
-
-        @include media('<tablet') {
-            bottom: 25%;
-            right: 5%;
-        }
-
-        @include media('<phone') {
-            bottom: 10%;
-            right: 3%;
-        }
+    &:hover,
+    &:focus {
+      color: #f8c255;
     }
+  }
+
+  .like {
+    position: absolute;
+    bottom: 6%;
+    right: 29%;
+
+    @include media("<1380px") {
+      bottom: 3%;
+    }
+
+    @include media("<widescreen") {
+      bottom: 20%;
+    }
+
+    @include media("<desktop") {
+      bottom: 15%;
+    }
+
+    @include media("<tablet") {
+      bottom: 25%;
+      right: 5%;
+    }
+
+    @include media("<phone") {
+      bottom: 8%;
+    }
+  }
 }

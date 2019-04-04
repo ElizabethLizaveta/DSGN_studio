@@ -1,204 +1,189 @@
 .footer {
-    background: map-get($footer, 'section-bg');
-    color: map-get($footer, 'section-font-color');
-    position: relative;
-    height: calc(100vw*0.43);
-    padding: rem-size(150px) 0 rem-size(53px);
+  background: map-get($footer, "section-bg");
+  color: map-get($footer, "section-font-color");
+  position: relative;
+  display: flex;
 
-    @include media('<1400px') {
-        padding: rem-size(100px) 0 rem-size(53px);
+  @include media("<desktop") {
+    flex-direction: column;
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    width: 9999px;
+    height: 100%;
+    background: #e9eae2;
+    position: absolute;
+    left: 100%;
+    bottom: 0;
+
+    @include media("<1500px") {
+      display: none;
+    }
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    width: 9999px;
+    height: 100%;
+    background: #e9eae2;
+    position: absolute;
+    right: 100%;
+    bottom: 0;
+
+    @include media("<1500px") {
+      display: none;
+    }
+  }
+
+  .map {
+    width: 50%;
+
+    @include media("<desktop") {
+      width: 100%;
+      height: rem-size(600px);
+      margin-bottom: rem-size(20px);
+    }
+  }
+
+  .footer-content {
+    height: 100%;
+    max-width: rem-size(463px);
+    padding: rem-size(150px) rem-size(15px) rem-size(53px);
+    margin-left: rem-size(105px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include media("<desktop") {
+      width: 100%;
+      max-width: unset;
+      padding: rem-size(15px);
+      margin-left: 0;
     }
 
-    @include media('<widescreen') {
-        padding: rem-size(50px) 0 rem-size(30px);
+    .row {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &-contact {
+    @include rem-font-size(13px);
+    text-transform: uppercase;
+
+    @include media("<widescreen") {
+      @include rem-font-size(12px);
     }
 
-    @include media('<desktop') {
-        padding: rem-size(40px) 0 rem-size(20px);
+    @include media("<desktop") {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
     }
 
-    @include media('<tablet') {
-        padding: rem-size(20px) 0 rem-size(20px);
-        height: unset;
+    address {
+      margin-bottom: rem-size(14px);
     }
 
-    .inner-wrap {
-        max-width: rem-size(1198px);
-        height: 100%;
-        margin: 0 auto;
-        padding: 0 rem-size(15px);
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-start;
+    .contact {
+      a {
+        color: map-get($footer, "section-font-color");
+        display: block;
 
-        @include media('<tablet') {
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
+        &:hover,
+        &:focus {
+          opacity: 0.5;
         }
+      }
+    }
+  }
+
+  &-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include media("<widescreen") {
+      width: 40%;
     }
 
-    .map {
-        width: 50%;
-        height: calc(100vw*0.43);
-        position: absolute;
-        top: 0;
-        left: 0;
-    
-        @include media('<tablet') {
-            position: relative;
-            width: 100%;
-            height: calc(100vw*0.85);
-            margin-bottom: rem-size(20px);
-        }
+    @include media("<desktop") {
+      display: none;
     }
 
-    .footer-content {
-        height: 100%;
-        width: 40%;
-        padding-right: rem-size(10px);
-        display: flex;
-        flex-direction: column; 
-        justify-content: space-between;
+    .logo {
+      margin-bottom: rem-size(55px);
 
-        @include media('<tablet') {
-            width: 100%;
-        }
-
-        .row {
-            display: flex;
-            justify-content: space-between;
-        }
+      @include media("<widescreen") {
+        margin-bottom: rem-size(40px);
+      }
     }
+  }
 
-    &-contact {
-        @include rem-font-size(13px);
-        text-transform: uppercase;
+  .social {
+    li {
+      display: inline-block;
 
-        @include media('<widescreen') {
-            @include rem-font-size(12px);
-        }
-
-        @include media('<tablet') {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        address {
-            margin-bottom: rem-size(14px);
-        }
-
-        .contact {
-
-            a {
-                color: map-get($footer, 'section-font-color');
-                display: block;
-
-                &:hover,
-                &:focus {
-                    opacity: 0.5;
-                }
-            }
-        }
-    }
-
-    &-logo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        @include media('<widescreen') {
-            width: 40%;
-        }
-
-        @include media('<desktop') {
-            width: 35%;
-        }
-
-        @include media('<tablet') {
-            display: none;
-        }
-
-        .logo {
-            margin-bottom: rem-size(55px);
-    
-            @include media('<widescreen') {
-                margin-bottom: rem-size(40px);
-            }
-
-            @include media('<desktop') {
-                margin-bottom: rem-size(30px);
-            }
-        }
-    }
-
-    .social {
-
-        li {
-            display: inline-block;
-
-            &:hover,
-            &:focus {
-
-                i {
-                    opacity: 0.5;
-                }
-            }
-        }
-
-        li+li {
-            margin-left: rem-size(9px);
-
-            @include media('<widescreen') {
-                margin-left: rem-size(5px);
-            }
-
-            @include media('<phone') {
-                margin-left: rem-size(8px);
-            }
-        }
-
+      &:hover,
+      &:focus {
         i {
-            @include rem-font-size(25px);
-            color: #7acec3;
-
-            @include media('<widescreen') {
-                @include rem-font-size(18px);
-            }
-
-            @include media('<desktop') {
-                @include rem-font-size(14px);
-            }
+          opacity: 0.5;
         }
+      }
     }
 
-    .copy {
-        @include rem-font-size(13px);
-        width: 100%;
-        padding-left: rem-size(17px);
-        margin-top: rem-size(10px);
+    li + li {
+      margin-left: rem-size(9px);
 
-        @include media('<tablet') {
-            padding-left: 0;
-        }
+      @include media("<widescreen") {
+        margin-left: rem-size(5px);
+      }
 
-        @include media('<phone') {
-            @include rem-font-size(10px);
-        }
-
-        .copyright {
-            @include rem-font-size(16px);
-            margin-right: rem-size(5px);
-        }
-
-        a {
-            color: map-get($footer, 'section-font-color');
-
-            &:hover,
-            &:focus {
-                opacity: 0.5;
-            }
-        }
+      @include media("<phone") {
+        margin-left: rem-size(8px);
+      }
     }
+
+    i {
+      @include rem-font-size(25px);
+      color: #7acec3;
+
+      @include media("<widescreen") {
+        @include rem-font-size(18px);
+      }
+    }
+  }
+
+  .copy {
+    @include rem-font-size(13px);
+    width: 100%;
+    padding-left: rem-size(17px);
+    margin-top: rem-size(73px);
+
+    @include media("<desktop") {
+    margin-top: 0;
+      padding-left: 0;
+    }
+
+    @include media("<phone") {
+      @include rem-font-size(10px);
+    }
+
+    .copyright {
+      @include rem-font-size(16px);
+      margin-right: rem-size(5px);
+    }
+
+    a {
+      color: map-get($footer, "section-font-color");
+
+      &:hover,
+      &:focus {
+        opacity: 0.5;
+      }
+    }
+  }
 }

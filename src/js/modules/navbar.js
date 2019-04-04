@@ -8,7 +8,11 @@ const navbarMenu = {
     }
 
     function navbarShow() {
-      navbarNav.toggleClass('navigation-visible');
+      if (window.matchMedia('(min-width: 768px)').matches) {
+        navbarNav.toggleClass('navigation-visible');
+      } else {
+        navbarNav.slideToggle();
+      }
     }
 
     function navbarMain() {

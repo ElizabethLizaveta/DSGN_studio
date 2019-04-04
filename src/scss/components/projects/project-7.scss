@@ -1,113 +1,112 @@
 .project-7 {
-    @include rem-font-size(12px);
-    width: 100%;
-    position: relative;
-    line-height: rem-size(12px);
-    font-weight: 300;
-    color: map-get($project-7, 'section-font-color');
-    background: 100% 100%/cover;
+  @include rem-font-size(12px);
+  width: 100%;
+  position: relative;
+  line-height: rem-size(12px);
+  font-weight: 300;
+  color: map-get($project-7, "section-font-color");
+  background: 100% 100% / cover;
 
-    &:before {
-        content: '';
-        display: block;
-        width: 9999px;
-        height: 100%;
-        background: #eaebe1;
-        position: absolute;
-        left: 100%;
+  &:before {
+    content: "";
+    display: block;
+    width: 9999px;
+    height: 100%;
+    background: #eaebe1;
+    position: absolute;
+    left: 100%;
 
-        @include media('<1500px') {
-            display: none;
-        }
-    } 
+    @include media("<1500px") {
+      display: none;
+    }
+  }
 
-    .text-content {
-        position: absolute;
-        bottom: 9%;
-        left: 12%;
-        display: flex;
+  .text-content {
+    position: absolute;
+    bottom: 9%;
+    left: 10%;
+    display: flex;
 
-        @include media('<desktop') {
-            bottom: 3%;
-            left: 10%;
-        }
-
-        @include media('<tablet') {
-            flex-direction: column;
-            top: 10%;
-            left: 10%;
-        }
+    @include media("<desktop") {
+      bottom: 3%;
+      left: 10%;
     }
 
-    .h2 {
-        @include rem-font-size(24px);
-        margin-bottom: rem-size(19px);
+    @include media("<tablet") {
+      flex-direction: column;
+      top: 10%;
+      left: 5%;
+    }
+  }
 
-        @include media('<widescreen') {
-            @include rem-font-size(20px);
-        }
+  .h2 {
+    @include rem-font-size(24px);
+    margin-bottom: rem-size(19px);
 
-        @include media('<desktop') {
-            @include rem-font-size(18px);
-        }
+    @include media("<widescreen") {
+      @include rem-font-size(20px);
     }
 
-    .project-info {
-        @include media('<widescreen') {
-            margin-bottom: rem-size(20px);
-        }
+    @include media("<desktop") {
+      @include rem-font-size(18px);
+    }
+  }
 
-        @include media('<tablet') {
-            margin-bottom: rem-size(40px);
-        }
-
-        @include media('<phone') {
-            margin-bottom: rem-size(10px);
-        }
+  .project-info {
+    @include media("<widescreen") {
+      margin-bottom: rem-size(20px);
     }
 
-    .project-link {
-        color: map-get($project-7, 'section-font-color');
-        margin: rem-size(27px) 0 0 rem-size(18px);
-        
-
-        @include media('<tablet') {
-            margin: 0;
-        }
-
-        &:hover,
-        &:focus {
-            color: #f8c255;
-        }
+    @include media("<tablet") {
+      margin-bottom: rem-size(40px);
     }
 
-    .like {
-        position: absolute;
-        right: 3%;
-        bottom: 11%;
-
-        @include media('<1460px') {
-            bottom: 3%;
-            right: 20%;
-        }
-
-        @include media('<widescreen') {
-            right: 6%;
-            bottom: 15%;
-        }
-
-        @include media('<desktop') {
-            right: 25%;
-            bottom: 2%;
-        }
-
-        @include media('<tablet') {
-            left: 10%;
-            bottom: 35%;
-        }
-
-        @include media('<phone') {
-            bottom: 15%;
-        }
+    @include media("<phone") {
+      margin-bottom: rem-size(20px);
     }
+  }
+
+  .project-link {
+    color: map-get($project-7, "section-font-color");
+    margin: rem-size(27px) 0 0 rem-size(18px);
+
+    @include media("<tablet") {
+      margin: 0;
+    }
+
+    &:hover,
+    &:focus {
+      color: #f8c255;
+    }
+  }
+
+  .like {
+    position: absolute;
+    right: 3%;
+    bottom: 11%;
+
+    @include media("<1460px") {
+      bottom: 3%;
+      right: 20%;
+    }
+
+    @include media("<widescreen") {
+      right: 6%;
+      bottom: 15%;
+    }
+
+    @include media("<desktop") {
+      right: 25%;
+      bottom: 2%;
+    }
+
+    @include media("<tablet") {
+      left: 10%;
+      bottom: 35%;
+    }
+
+    @include media("<phone") {
+      bottom: 15%;
+    }
+  }
 }

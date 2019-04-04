@@ -4,10 +4,11 @@
 // Feel free with using ES6 here.
 
 import navbarMenu from './modules/navbar';
-import projectsMenu from './modules/projects-box';
+import fullMenu from './modules/menu-mob';
 import projectFull from './modules/project-full';
 import swiperSlide from './modules/swiper';
 import googleMap from './modules/google-map';
+import heightCalc from './modules/height-calc';
 
 (($) => {
   // When DOM is ready
@@ -15,7 +16,8 @@ import googleMap from './modules/google-map';
     googleMap.function();
   });
   navbarMenu.function();
-  projectsMenu.function();
+  fullMenu.function();
   projectFull.function();
   swiperSlide.function();
+  heightCalc.function();
 })(jQuery);

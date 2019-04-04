@@ -1,4 +1,4 @@
-const projectsMenu = {
+const fullMenu = {
   function() {
     const projectBtn = $('.projects-button');
     const projectMenu = $('.projects-menu');
@@ -46,4 +46,4 @@ const projectsMenu = {
   },
 };
 
-export default projectsMenu;
+export default fullMenu;
