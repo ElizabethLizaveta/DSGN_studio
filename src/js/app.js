@@ -11,13 +11,12 @@ import googleMap from './modules/google-map';
 import heightCalc from './modules/height-calc';
 
 (($) => {
-  // When DOM is ready
+  googleMap.init();
   $(() => {
-    googleMap.function();
+    navbarMenu.init();
+    fullMenu.init();
+    projectFull.init();
+    swiperSlide.init();
+    heightCalc.init();
   });
-  navbarMenu.function();
-  fullMenu.function();
-  projectFull.function();
-  swiperSlide.function();
-  heightCalc.function();
 })(jQuery);
