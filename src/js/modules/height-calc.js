@@ -1,7 +1,7 @@
 const heightCalc = (($) => {
-  const $newsContent = $('.news-content');
-  const $newsHeader = $newsContent.find('.header-wrap');
-  const $textWrap = $newsContent.find('.text-wrap');
+  const newsContent = $('.news-content');
+  const newsHeader = newsContent.find('.header-wrap');
+  const textWrap = newsContent.find('.text-wrap');
 
   function findMaxHeight(elem) {
     let maxHeight = 0;
@@ -14,8 +14,8 @@ const heightCalc = (($) => {
   }
 
   const init = () => {
-    findMaxHeight($newsHeader);
-    findMaxHeight($textWrap);
+    findMaxHeight(newsHeader);
+    findMaxHeight(textWrap);
   };
   return { init };
 })(jQuery);

@@ -1,21 +1,21 @@
 const navbarMenu = (($) => {
-  const $toggleBtn = $('.hamburger');
-  const $navbarNav = $('.navigation');
+  const toggleBtn = $('.hamburger');
+  const navbarNav = $('.navigation');
 
   function toggleAnimate() {
-    $toggleBtn.toggleClass('is-active');
+    toggleBtn.toggleClass('is-active');
   }
 
   function navbarShow() {
     if (window.matchMedia('(min-width: 768px)').matches) {
-      $navbarNav.toggleClass('navigation-visible');
+      navbarNav.toggleClass('navigation-visible');
     } else {
-      $navbarNav.slideToggle();
+      navbarNav.slideToggle();
     }
   }
 
   function navbarMain() {
-    $toggleBtn.click(() => {
+    toggleBtn.click(() => {
       toggleAnimate();
       navbarShow();
     });
