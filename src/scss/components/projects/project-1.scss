@@ -1,0 +1,98 @@
+.project-1 {
+  font-weight: 300;
+  line-height: rem-size(12px);
+  color: map-get($project-1, "section-font-color");
+  background: map-get($project-1, "section-bg");
+  position: relative;
+
+  .text-content {
+    position: absolute;
+    top: 18%;
+    left: 18%;
+    z-index: 2;
+
+    @include media("<widescreen") {
+      top: 10%;
+      left: 10%;
+    }
+
+    @include media("<tablet") {
+      left: rem-size(15px);
+      top: rem-size(100px);
+    }
+
+    @include media("<phone") {
+      top: rem-size(45px);
+      max-width: 60%;
+    }
+  }
+
+  .project-link {
+    color: map-get($project-1, "section-font-color");
+    margin-left: rem-size(10px);
+
+    &:hover,
+    &:focus {
+      color: #f8c255;
+    }
+  }
+
+  .h2 {
+    @include rem-font-size(24px);
+    margin-bottom: rem-size(22px);
+
+    @include media("<widescreen") {
+      @include rem-font-size(20px);
+    }
+
+    @include media("<desktop") {
+      @include rem-font-size(18px);
+    }
+  }
+
+  .project-info {
+    margin-bottom: rem-size(70px);
+
+    @include media("<desktop") {
+      margin-bottom: rem-size(50px);
+    }
+
+    @include media("<tablet") {
+      margin-bottom: rem-size(30px);
+    }
+
+    @include media("<phone") {
+      margin-bottom: rem-size(20px);
+    }
+  }
+
+  .like {
+    position: absolute;
+    left: 27%;
+    bottom: 15%;
+
+    @include media("<widescreen") {
+      left: 10%;
+      bottom: 20%;
+    }
+
+    @include media("<tablet") {
+      bottom: 25%;
+    }
+
+    @include media("<phone") {
+      bottom: 8%;
+    }
+  }
+
+  .img-wrap {
+    height: 100%;
+    width: 42%;
+    position: absolute;
+    right: 5%;
+
+    img {
+      max-height: 100%;
+    }
+  }
+}

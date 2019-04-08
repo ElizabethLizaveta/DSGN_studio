@@ -1,0 +1,99 @@
+.news-content {
+  @include rem-font-size(12px);
+  width: 100%;
+  max-width: rem-size(800px);
+  padding: rem-size(80px) rem-size(15px) rem-size(67px);
+  margin: 0 0 0 rem-size(87px);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include media("<widescreen") {
+    padding: rem-size(50px) rem-size(15px) rem-size(50px);
+    margin: 0;
+    max-width: unset;
+  }
+
+  @include media("<tablet") {
+    @include rem-font-size(16px);
+    line-height: rem-font-size(18px);
+    flex-direction: column;
+  }
+
+  .col {
+    width: 48.6%;
+    display: flex;
+    flex-direction: column;
+
+    @include media("<tablet") {
+      width: 100%;
+    }
+  }
+
+  .header-wrap {
+    min-height: rem-size(51px);
+  }
+
+  .news-title {
+    &:hover,
+    &:focus {
+      .h2 {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .h2 {
+    @include rem-font-size(24px);
+    font-weight: 700;
+    line-height: rem-size(24px);
+    margin-bottom: rem-size(3px);
+
+    @include media("<widescreen") {
+      @include rem-font-size(20px);
+    }
+
+    @include media("<desktop") {
+      @include rem-font-size(18px);
+    }
+  }
+
+  .date {
+    @include rem-font-size(12px);
+    margin-bottom: rem-size(16px);
+  }
+
+  .img-wrap {
+    margin-bottom: rem-size(15px);
+
+    img {
+      min-width: 100%;
+    }
+  }
+
+  .text-wrap {
+    min-height: rem-size(70px);
+    text-align: justify;
+    margin-bottom: rem-size(0px);
+
+    @include media("<675px") {
+      min-height: rem-size(100px);
+    }
+
+    @include media("<phone") {
+      min-height: inherit;
+      margin-bottom: rem-size(10px);
+    }
+  }
+
+  .link-more {
+    text-transform: uppercase;
+    color: #fd5000;
+    align-self: flex-end;
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+  }
+}

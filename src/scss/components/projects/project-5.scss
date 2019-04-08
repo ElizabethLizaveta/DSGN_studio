@@ -1,0 +1,106 @@
+.project-5 {
+  @include rem-font-size(12px);
+  position: relative;
+  line-height: rem-size(12px);
+  font-weight: 300;
+  color: map-get($project-5, "section-font-color");
+  background: 100% 100% / cover;
+
+  @include media("<desktop") {
+    background: 0% 0% / cover;
+  }
+
+  @include media("<tablet") {
+    background: 0% 0% / cover;
+  }
+
+  .text-content {
+    position: absolute;
+    top: 28%;
+    right: 4%;
+
+    @include media("<1400px") {
+      top: 16%;
+      width: 45%;
+    }
+
+    @include media("<desktop") {
+      right: 5%;
+      top: 50%;
+    }
+
+    @include media("<tablet") {
+      right: rem-size(15px);
+      top: 20%;
+      width: auto;
+    }
+
+    @include media("<tablet") {
+      top: 15%;
+    }
+  }
+
+  .h2 {
+    @include rem-font-size(24px);
+    margin-bottom: rem-size(20px);
+
+    @include media("<widescreen") {
+      @include rem-font-size(20px);
+    }
+
+    @include media("<desktop") {
+      @include rem-font-size(18px);
+    }
+  }
+
+  .project-info {
+    margin-bottom: rem-size(28px);
+
+    @include media("<desktop") {
+      margin-bottom: rem-size(15px);
+    }
+  }
+
+  .project-link {
+    color: map-get($project-5, "section-font-color");
+    margin-left: rem-size(-35px);
+
+    @include media("<widescreen") {
+      margin-left: rem-size(-30px);
+    }
+
+    &:hover,
+    &:focus {
+      color: #f8c255;
+    }
+  }
+
+  .like {
+    position: absolute;
+    bottom: 12%;
+    right: 35%;
+
+    @include media("<1300px") {
+      bottom: 8%;
+    }
+
+    @include media("<widescreen") {
+      bottom: 20%;
+    }
+
+    @include media("<desktop") {
+      right: 20%;
+      bottom: 70%;
+    }
+
+    @include media("<tablet") {
+      right: 15%;
+      bottom: 25%;
+      width: auto;
+    }
+
+    @include media("<phone") {
+      bottom: 7%;
+    }
+  }
+}

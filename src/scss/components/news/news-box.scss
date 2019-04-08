@@ -1,0 +1,54 @@
+.news-box {
+  width: 32%;
+  background: map-get($news-box, "section-bg")
+    linear-gradient(to bottom right, transparent 49.8%, #fff, transparent 50.2%);
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 9999px;
+    height: 100%;
+    background: #d4edbf;
+    position: absolute;
+    right: 100%;
+
+    @include media("<1500px") {
+      display: none;
+    }
+  }
+
+  @include media("<widescreen") {
+    position: relative;
+    width: 100%;
+    height: inherit;
+    padding: rem-size(22px);
+    display: flex;
+    background-image: none;
+  }
+
+  .h1 {
+    @include rem-font-size(48px);
+    line-height: rem-size(36px);
+    color: map-get($news-box, "section-font-color");
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 32%;
+    right: 22%;
+
+    @include media("<1400px") {
+      @include rem-font-size(40px);
+    }
+
+    @include media("<widescreen") {
+      @include rem-font-size(35px);
+      position: relative;
+      bottom: 0;
+      right: 0;
+    }
+
+    @include media("<desktop") {
+      @include rem-font-size(30px);
+    }
+  }
+}

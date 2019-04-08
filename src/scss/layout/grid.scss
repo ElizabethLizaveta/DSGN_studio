@@ -1,0 +1,182 @@
+.projects {
+  display: grid;
+  grid-template-columns: 20% 11% 18% 20% 31%;
+  grid-template-rows: 20% 19.5% 17.2% 20% 23.3%;
+
+  @include media("<widescreen") {
+    grid-template-rows: 20% 19.5% 17.2% 26% 17.3%;
+  }
+
+  @include media("<tablet") {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.projects-box {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+  @include media("<widescreen") {
+    grid-row-end: 2;
+    grid-column-end: 4;
+  }
+}
+
+.project-1 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 5;
+
+  @include media("<widescreen") {
+    grid-row-end: 2;
+    grid-column-start: 4;
+    grid-column-end: 6;
+  }
+
+  @include media("<tablet") {
+    width: 100%;
+    min-height: calc(100vw * 0.83);
+  }
+
+  @include media("<phone") {
+    min-height: calc(100vw * 0.8);
+  }
+}
+
+.project-2 {
+  grid-row-start: 3;
+  grid-row-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 2;
+
+  @include media("<widescreen") {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-end: 3;
+  }
+
+  @include media("<tablet") {
+    width: 100%;
+    min-height: calc(100vw * 0.9);
+  }
+}
+
+.project-3 {
+  grid-row-start: 3;
+  grid-row-end: 5;
+  grid-column-start: 2;
+  grid-column-end: 5;
+
+  @include media("<widescreen") {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 6;
+  }
+
+  @include media("<tablet") {
+    width: 100%;
+    min-height: calc(100vw * 0.8);
+  }
+}
+
+.project-4 {
+  grid-row-start: 5;
+  grid-row-end: 6;
+  grid-column-start: 1;
+  grid-column-end: 4;
+
+  @include media("<widescreen") {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-end: 5;
+  }
+
+  @include media("<tablet") {
+    width: 100%;
+    min-height: calc(100vw * 0.7);
+  }
+
+  @include media("<phone") {
+    min-height: calc(100vw * 0.8);
+  }
+}
+
+.project-5 {
+  grid-row-start: 5;
+  grid-row-end: 6;
+  grid-column-start: 4;
+  grid-column-end: 5;
+
+  @include media("<widescreen") {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 5;
+    grid-column-end: 6;
+  }
+
+  @include media("<tablet") {
+    width: 100%;
+    min-height: calc(100vw * 0.6);
+  }
+}
+
+.project-6 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 5;
+  grid-column-end: 6;
+
+  @include media("<widescreen") {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 4;
+  }
+
+  @include media("<tablet") {
+    width: 100%;
+    min-height: calc(100vw * 0.7);
+  }
+}
+
+.project-7 {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 5;
+  grid-column-end: 6;
+
+  @include media("<widescreen") {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  @include media("<tablet") {
+    width: 100%;
+    min-height: calc(100vw * 0.8);
+  }
+}
+
+.project-8 {
+  grid-row-start: 4;
+  grid-row-end: 5;
+  grid-column-start: 5;
+  grid-column-end: 6;
+
+  @include media("<widescreen") {
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+
+  @include media("<tablet") {
+    width: 100%;
+    min-height: calc(100vw * 0.6);
+  }
+}

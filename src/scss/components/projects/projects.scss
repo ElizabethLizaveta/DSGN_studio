@@ -1,0 +1,72 @@
+.projects {
+  height: calc(100vw * 0.84);
+  max-height: 1265px;
+  max-width: 1500px;
+
+  @include media("<widescreen") {
+    max-height: 9000px;
+    height: calc(100vw * 2);
+  }
+
+  @include media("<tablet") {
+    width: 100%;
+    height: auto;
+  }
+
+  @include media("<phone") {
+    height: auto;
+  }
+}
+
+.project-link {
+  @include rem-font-size(18px);
+  display: block;
+  text-transform: uppercase;
+
+  @include media("<desktop") {
+    @include rem-font-size(16px);
+  }
+
+  &:hover,
+  &:focus {
+    color: #f8c255;
+  }
+
+  i {
+    color: #f8c255;
+    margin-right: rem-size(9px);
+  }
+}
+
+.project-info {
+  li {
+    @include rem-font-size(12px);
+    text-transform: uppercase;
+
+    span {
+      font-weight: 700;
+      margin-right: rem-size(5px);
+    }
+  }
+}
+
+.like {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10%;
+
+  .like-button {
+    @include rem-font-size(25px);
+
+    &:hover,
+    &:focus {
+      color: #ff0000;
+    }
+  }
+
+  .like-number {
+    @include rem-font-size(11px);
+    color: #ff0000;
+  }
+}
