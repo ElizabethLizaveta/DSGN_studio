@@ -134,6 +134,12 @@
     .swiper-slide {
       text-align: center;
 
+      &.swiper-slide-active {
+        img {
+          border: 2px solid #333;
+        }
+      }
+
       img {
         border: rem-size(1px) solid #d4d5cd;
 

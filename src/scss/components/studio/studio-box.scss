@@ -23,6 +23,10 @@
     background-image: none;
   }
 
+  @include media("<tablet") {
+    padding: rem-size(22px) rem-size(15px);
+  }
+
   .h1 {
     @include rem-font-size(48px);
     color: map-get($studio-box, "section-font-color");

@@ -64,27 +64,16 @@
       align-items: center;
     }
   }
-
-  p + p {
-    margin-top: rem-size(14px);
-
-    @include media("<widescreen") {
-      margin-top: 0;
-    }
-  }
-
-  .text-bold {
+  
+  .heading-wrap {
     line-height: rem-size(18px);
     font-weight: 700;
     font-style: italic;
-
-    &.mb {
-      margin-bottom: rem-size(34px);
+    margin-bottom: rem-size(34px);
 
       @include media("<widescreen") {
         margin-bottom: rem-size(15px);
       }
-    }
   }
 
   .img-wrap {
